@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+    {% block head_title %} Donate Blood | {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+
+<h3>If you are already a donor</h3>
+<a class="nav-link active" href="{% url 'login' %}">Login</a>
+<h3>If you are new then</h3>
+<a class="nav-link active" href="{% url 'register' %}">Register</a>
+
+{% endblock content %}

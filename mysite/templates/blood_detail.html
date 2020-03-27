@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+    {% block head_title %}Blood Bank Detail | {{ block.super }}{% endblock head_title %}
+
+
+{% block content %}
+
+
+<h3>Bank Name: {{object.blood_bank_name}}</h3><br>
+<h4>Contact person: {{object.contact_person}}</h4><br>
+<h4>Email: {{object.email}}</h4><br>
+<h4>Phone: {{object.phone}}</h4><br>
+<h4>Country: {{object.country}}</h4><br>
+<h4>Address: {{object.address}}</h4><br>
+<h4>About: {{object.about}}</h4><br>
+
+
+
+
+
+{% endblock content %}

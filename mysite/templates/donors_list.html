@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+    {% block head_title %}List of donors | {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+<h1>Donor List</h1>
+    <table>
+        <tr>
+            <th style="padding-right: 200px;">Name</th>
+            <th style="padding-right: 200px;">Email</th>
+            <th style="padding-right: 200px;">Phone</th>
+            <th style="padding-right: 200px;">Address</th>
+        </tr>
+    {% for obj in object_list %}
+        <tr>
+            <td><a href="/donor_list/{{obj.pk}}">{{obj.name}}</a></td>
+            <td>{{obj.email}}</td>
+            <td>{{obj.mobile_no}}</td>
+            <td>{{obj.address}}</td>
+        </tr>
+
+
+
+    {% endfor %}
+</table>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+    {% block head_title %}Thanks | {{ block.super }}{% endblock head_title %}
+
+
+{% block content %}
+<div class="jumbotron text-center">
+  <h1 class="display-3">Thank You!</h1>
+  <p class="lead"><strong>Hello </strong> We will reply on your email shortly so please keep checking it.</p>
+  <hr>
+  <p>
+
+  </p>
+  <p class="lead">
+    <a class="btn btn-primary btn-sm" href="{% url 'home' %}" role="button">Continue to homepage</a>
+  </p>
+</div>
+{% endblock content %}

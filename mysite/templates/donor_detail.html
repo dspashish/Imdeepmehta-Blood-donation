@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+    {% block head_title %}donor details | {{ block.super }}{% endblock head_title %}
+
+
+{% block content %}
+
+
+<h1>Name: {{object.name}}</h1><br>
+<h2>Blood Group: {{object.blood_group}}</h2>
+
+<br>
+<br>
+<p>Email: {{ object.email }}</p>
+<p>Mobile no: {{ object.email }}</p>
+<p>Gender: {{object.gender}}</p>
+<br>
+<br>
+<p>Donated on: {{ object.date }}</p>
+
+
+
+{% endblock content %}

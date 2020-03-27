@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+    {% block head_title %}Bank List | {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+<h2>Bank List</h2>
+<a class="btn btn-primary" href="{% url 'blood_bank_create' %}" role="button">Register Your Blood Bank</a>
+
+<br>
+<br>
+
+<br>
+<br>
+    <table>
+        <tr>
+            <th style="padding-right: 200px;">Blook Bank Name</th>
+            <th style="padding-right: 200px;">Name</th>
+            <th style="padding-right: 200px;">Email</th>
+            <th style="padding-right: 200px;">Phone</th>
+
+        </tr>
+    {% for obj in object_list %}
+        <tr>
+            <td><a href="/blood_bank_list/{{obj.pk}}/">{{obj.blood_bank_name}}</a></td>
+            <td>{{obj.contact_person}}</td>
+            <td>{{obj.email}}</td>
+            <td>{{obj.phone}}</td>
+        </tr>
+
+
+
+    {% endfor %}
+</table>
+{% endblock content %}

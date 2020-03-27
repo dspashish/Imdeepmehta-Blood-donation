@@ -1,0 +1,80 @@
+
+{% if user.is_authenticated %}
+
+<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section clearfix">
+		<a href="{% url 'home' %}" class="site-logo">
+
+			<h4 style="color: white;">Blood Donors</h4>
+		</a>
+		<div class="header-right">
+			<a href="/profile/" class="hr-btn">{{ user.username }}</a>
+			<span>|</span>
+			<div class="user-panel">
+				<a href="/logout/" class="login">logout</a>
+
+			</div>
+		</div>
+		<ul class="main-menu">
+
+			<li><a href="/donor_user/">Donate Blood</a>
+			<li><a href="{% url 'donor_list' %}">Get Blood</a>
+				<ul class="sub-menu">
+					<li><a href="/donor_AP/">A+</a></li>
+					<li><a href="/donor_OP/">O+</a></li>
+					<li><a href="/donor_BP/">B+</a></li>
+					<li><a href="/donor_ABP/">AB+</a></li>
+					<li><a href="/donor_ON/">O-</a></li>
+					<li><a href="/donor_BN/">B-</a></li>
+					<li><a href="/donor_AN/">A-</a></li>
+					<li><a href="/donor_ABN/">AB-</a></li>
+				</ul>
+			</li>
+			<li><a href="{% url 'bank_list' %}">Blood Banks</a></li>
+			<li><a href="{% url 'contact' %}">Contact</a></li>
+		</ul>
+	</header>
+
+{% else %}
+<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section clearfix">
+		<a href="{% url 'home' %}" class="site-logo">
+
+			<h4 style="color: white;">Blood Donors</h4>
+		</a>
+		<div class="header-right">
+			<a href="{% url 'register' %}" class="hr-btn">Sign Up</a>
+			<span>|</span>
+			<div class="user-panel">
+				<a href="{% url 'login' %}" class="login">Log in</a>
+
+			</div>
+		</div>
+		<ul class="main-menu">
+
+			<li><a href="{% url 'choice' %}">Donate Blood</a>
+			<li><a href="{% url 'donor_list' %}">Get Blood</a>
+				<ul class="sub-menu">
+					<li><a href="">A+</a></li>
+					<li><a href="">O+</a></li>
+					<li><a href="">B+</a></li>
+					<li><a href="">AB+</a></li>
+					<li><a href="">O-</a></li>
+					<li><a href="">B-</a></li>
+					<li><a href="">A-</a></li>
+					<li><a href="">AB-</a></li>
+				</ul>
+			</li>
+			<li><a href="{% url 'bank_list' %}">Blood Banks</a></li>
+			<li><a href="{% url 'contact' %}">Contact Us</a></li>
+		</ul>
+	</header>
+{% endif %}
